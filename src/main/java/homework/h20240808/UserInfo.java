@@ -1,4 +1,4 @@
-package homework;
+package homework.h20240808;
 
 public class UserInfo {
     public static void main(String[] args) {
