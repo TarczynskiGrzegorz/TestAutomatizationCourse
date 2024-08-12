@@ -1,6 +1,7 @@
 package homework.h20240812;
 
 public class Model {
+    private String name;
     private int memoryGb;
     private String operatingSystem;
     private Display display;
@@ -10,7 +11,8 @@ public class Model {
 
     }
 
-    public Model(int memoryGb, String operatingSystem, Display display, Camera camera) {
+    public Model(String name,int memoryGb, String operatingSystem, Display display, Camera camera) {
+        this.name=name;
         this.memoryGb = memoryGb;
         this.operatingSystem = operatingSystem;
         this.display = display;
@@ -52,6 +54,7 @@ public class Model {
     @Override
     public String toString() {
         return "{" +
+                "\n \tname='" + name + '\'' +
                 "\n \tmemoryGb=" + memoryGb +
                 ",\n \toperatingSystem='" + operatingSystem + '\'' +
                 ",\n \tdisplay=" + display.toString() +

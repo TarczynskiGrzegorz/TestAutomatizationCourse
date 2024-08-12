@@ -6,7 +6,7 @@ public class Main {
 
         Display display = new Display(600, "AMOLED", 2048);
 
-        Model iphone15 = new Model(128, "IOS 5", display, camera);
+        Model iphone15 = new Model("Iphone 15",128, "IOS 5", display, camera);
 
         Phone phone1 = new Phone();
         phone1.setColor("black");
