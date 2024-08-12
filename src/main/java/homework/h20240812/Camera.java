@@ -4,7 +4,9 @@ public class Camera {
     private int resolutionPx;
     private int camerasAmount;
     private boolean hasFlashlight;
-    public Camera(){}
+
+    public Camera() {
+    }
 
     public Camera(int resolutionPx, int camerasAmount, boolean hasFlashlight) {
         this.resolutionPx = resolutionPx;

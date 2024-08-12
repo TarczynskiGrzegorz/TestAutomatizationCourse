@@ -45,8 +45,8 @@ public class User {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("user: " + userName +"\nphones: \n" );
-        for(Phone p: phones){
+        sb.append("user: " + userName + "\nphones: \n");
+        for (Phone p : phones) {
             sb.append(p.toString());
         }
         return sb.toString();

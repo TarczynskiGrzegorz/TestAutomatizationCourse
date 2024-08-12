@@ -7,7 +7,7 @@ public class Phone {
     private Model model;
     private String color;
 
-    public Phone(){
+    public Phone() {
     }
 
     public Phone(double prize, Model model, String color) {
