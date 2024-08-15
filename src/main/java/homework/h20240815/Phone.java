@@ -1,19 +1,26 @@
 package homework.h20240815;
 
 import java.time.Instant;
+import java.time.LocalDate;
+import java.util.Date;
 import java.util.Objects;
 
 public abstract class Phone {
+    private final int HASH_BEAN;
     private int telephoneNumber;
-    private final int hashBean;
+    protected Communication typeOfCommunication;
+    protected String color;
+    protected LocalDate productionDate = LocalDate.now();
+    protected int prize;
+    protected int weight;
 
     public Phone() {
-        this.hashBean = Instant.now().getNano();
+        this.HASH_BEAN = Instant.now().getNano();
     }
 
     public Phone(int telephoneNumber) {
         this.telephoneNumber = telephoneNumber;
-        this.hashBean = Instant.now().getNano();
+        this.HASH_BEAN = Instant.now().getNano();
     }
 
     public abstract void call();
@@ -29,6 +36,6 @@ public abstract class Phone {
 
     @Override
     public int hashCode() {
-        return Objects.hash(telephoneNumber, hashBean);
+        return Objects.hash(telephoneNumber, HASH_BEAN);
     }
 }
