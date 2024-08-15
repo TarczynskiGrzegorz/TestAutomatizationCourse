@@ -1,15 +1,22 @@
 package homework.h20240815;
 
+import java.time.Instant;
+import java.util.Objects;
+
 public abstract class Phone {
     private int telephoneNumber;
-    private String serialNumber;
+    private final int hashBean;
+
+    public Phone() {
+        this.hashBean = Instant.now().getNano();
+    }
+
+    public Phone(int telephoneNumber) {
+        this.telephoneNumber = telephoneNumber;
+        this.hashBean = Instant.now().getNano();
+    }
 
     public abstract void call();
-
-    public Phone(int telephoneNumber, String serialNumber) {
-        this.telephoneNumber = telephoneNumber;
-        this.serialNumber = serialNumber;
-    }
 
     public int getTelephoneNumber() {
         return telephoneNumber;
@@ -19,13 +26,9 @@ public abstract class Phone {
         this.telephoneNumber = telephoneNumber;
     }
 
-    public String getSerialNumber() {
-        return serialNumber;
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(telephoneNumber, hashBean);
     }
-
-    public void setSerialNumber(String serialNumber) {
-        this.serialNumber = serialNumber;
-    }
-
-
 }
