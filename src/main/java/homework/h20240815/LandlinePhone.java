@@ -48,7 +48,7 @@ public class LandlinePhone extends Phone {
         if (this == obj) return true;
         if (obj == null || getClass() != obj.getClass()) return false;
         LandlinePhone p = (LandlinePhone) obj;
-        return getTelephoneNumber() == p.getTelephoneNumber();
+        return keyboardType == p.getKeyboardType();
     }
 
     @Override

@@ -67,6 +67,7 @@ public class Main {
         Phone phone6 = new LandlinePhone(123);
 
         //true - compares only field "telephonnumber" - ovverride abstract class method equals
+        // I know it doesn't make a buisness logic. But I wanned to show diffrent aproaches to use equals and hash methods.
         System.out.println(phone5.equals(phone6));
         System.out.println(phone5.hashCode());
         System.out.println(phone6.hashCode());
