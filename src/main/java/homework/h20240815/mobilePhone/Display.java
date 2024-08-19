@@ -6,13 +6,12 @@ public class Display {
     private int sizeInch;
     private int resolutionHeight;
     private int resolutionWidth;
-    private int serialNumber;
 
-    public Display(int sizeInch, int resolutionHeight, int resolutionWidth,int serialNumber) {
+
+    public Display(int sizeInch, int resolutionHeight, int resolutionWidth) {
         this.sizeInch = sizeInch;
         this.resolutionHeight = resolutionHeight;
         this.resolutionWidth = resolutionWidth;
-        this.serialNumber = serialNumber;
     }
 
     public int getSizeInch() {
@@ -48,8 +47,4 @@ public class Display {
                 "px";
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(sizeInch,resolutionHeight,resolutionWidth,serialNumber);
-    }
 }

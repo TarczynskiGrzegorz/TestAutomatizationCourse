@@ -8,7 +8,6 @@ import java.util.Objects;
 public abstract class Phone {
 
 
-    private final int HASH_BEAN;
     private int telephoneNumber;
     protected Communication typeOfCommunication;
     protected String color;
@@ -17,7 +16,6 @@ public abstract class Phone {
     protected Integer weight;
 
     public Phone() {
-        this.HASH_BEAN = Instant.now().getNano();
     }
 
     public Phone(int telephoneNumber) {
@@ -31,7 +29,6 @@ public abstract class Phone {
         this.productionDate = productionDate;
         this.prize = prize;
         this.weight = weight;
-        this.HASH_BEAN = Instant.now().getNano();
     }
 
     public abstract void call();
@@ -44,21 +41,10 @@ public abstract class Phone {
         this.telephoneNumber = telephoneNumber;
     }
 
-    public int getHASH_BEAN() {
-        return HASH_BEAN;
-    }
-
-
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(telephoneNumber, HASH_BEAN);
-    }
 
     @Override
     public String toString() {
         return "Phone{" +
-                "HASH_BEAN=" + HASH_BEAN +
                 ", telephoneNumber=" + telephoneNumber +
                 ", typeOfCommunication=" + typeOfCommunication +
                 ", color='" + color + '\'' +
@@ -70,10 +56,21 @@ public abstract class Phone {
 
     @Override
     public boolean equals(Object obj) {
-       if(this == obj) return true;
-       if(obj==null ||getClass() != obj.getClass()) return false;
-       Phone p = (Phone) obj;
-       return getHASH_BEAN() == p.HASH_BEAN && telephoneNumber==p.telephoneNumber;
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        Phone p = (Phone) obj;
+        return Objects.equals(telephoneNumber, p.getTelephoneNumber())
+                && Objects.equals(typeOfCommunication, p.typeOfCommunication)
+                && Objects.equals(productionDate, p.productionDate)
+                && Objects.equals(prize, p.prize)
+                && Objects.equals(weight, p.weight);
 
     }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(telephoneNumber, typeOfCommunication, productionDate, prize, weight);
+    }
+
+
 }

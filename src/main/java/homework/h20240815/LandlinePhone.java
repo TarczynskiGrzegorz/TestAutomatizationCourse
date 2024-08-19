@@ -3,6 +3,7 @@ package homework.h20240815;
 import homework.h20240815.landlinePhone.Keyboard;
 
 import java.time.LocalDate;
+import java.util.Objects;
 
 public class LandlinePhone extends Phone {
     private Keyboard keyboardType;
@@ -48,5 +49,10 @@ public class LandlinePhone extends Phone {
         if (obj == null || getClass() != obj.getClass()) return false;
         LandlinePhone p = (LandlinePhone) obj;
         return getTelephoneNumber() == p.getTelephoneNumber();
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(keyboardType);
     }
 }

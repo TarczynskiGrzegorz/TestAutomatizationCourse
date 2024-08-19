@@ -8,11 +8,8 @@ import java.util.Objects;
 
 public class Camera {
     private List<Integer> resolutions = new ArrayList<>();
-    private int serialNumber;
 
-    public Camera(int serialNumber) {
-        this.serialNumber = serialNumber;
-    }
+
 
     public List<Integer> getResolutions() {
         return resolutions;
@@ -44,6 +41,6 @@ public class Camera {
 
     @Override
     public int hashCode() {
-        return Objects.hash(resolutions,serialNumber);
+        return Objects.hash(resolutions);
     }
 }

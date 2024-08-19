@@ -5,6 +5,7 @@ import homework.h20240815.mobilePhone.Camera;
 import homework.h20240815.mobilePhone.Display;
 
 import java.time.LocalDate;
+import java.util.Objects;
 
 public class MobilePhone extends Phone {
     private Camera camera;
@@ -14,6 +15,7 @@ public class MobilePhone extends Phone {
         super(telephoneNumber);
         super.typeOfCommunication = Communication.WIRELESS;
     }
+
 
     public MobilePhone(int telephoneNumber, Communication typeOfCommunication, String color, LocalDate productionDate, Integer prize, Integer weight, Camera camera, Display display) {
         super(telephoneNumber, typeOfCommunication, color, productionDate, prize, weight);
@@ -59,6 +61,13 @@ public class MobilePhone extends Phone {
         if (this == obj) return true;
         if (obj == null || getClass() != obj.getClass()) return false;
         MobilePhone p = (MobilePhone) obj;
-        return ((super.getHASH_BEAN() == p.getHASH_BEAN()) && (getTelephoneNumber() == p.getTelephoneNumber()));
+        // I dont compare displays - so if phones have diffrent displays shoud return true.
+        return super.equals(obj)
+                && Objects.equals(camera,p.camera);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.getTelephoneNumber(), typeOfCommunication, productionDate, prize, weight,camera);
     }
 }

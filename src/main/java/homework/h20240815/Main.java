@@ -12,9 +12,9 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
 
-        Camera camera = new Camera(234);
+        Camera camera = new Camera();
         camera.setResolutions(List.of(1600, 720));
-        Display display = new Display(5, 2340, 1080, 123);
+        Display display = new Display(5, 2340, 1080);
 
         MobilePhone phone1 = (MobilePhone) getPhone(0);
         phone1.setDisplay(display);
@@ -34,20 +34,42 @@ public class Main {
 
         System.out.println(phone2.toString());
 
-        Phone phone3 = new MobilePhone(123);
-        Phone phone4 = new MobilePhone(123);
+        MobilePhone phone3 = new MobilePhone(123);
+        MobilePhone phone4 = new MobilePhone(123);
 
         //false - diffrent creation time - compares this field in equals method
         System.out.println(phone3.equals(phone4));
+
+
+        MobilePhone phone3Casted = phone3;
+
+        MobilePhone phone4Casted = phone4;
+        //true - all fields have the same values
+        System.out.println(phone3Casted.equals(phone4Casted));
+
+        //true - phone3 have a display, phone4.camera = null . BUT  in equals as a buisness decision it doesn't make a diffrence if phon have diffrent display.
+        phone3Casted.setDisplay(display);
+        System.out.println(phone3Casted.equals(phone4Casted));
+        System.out.println(phone3Casted.hashCode());
+        System.out.println(phone4Casted.hashCode());
+
+
+        phone3Casted.setCamera(camera);
+        //false - phone3 have a camera, phone4.camera = null (they have diffrent cameras)
+        System.out.println(phone3Casted.equals(phone4Casted));
+        System.out.println(phone3Casted.hashCode());
+        System.out.println(phone4Casted.hashCode());
+
 
 
 
         Phone phone5 = new LandlinePhone(123);
         Phone phone6 = new LandlinePhone(123);
 
-        //true - compares only field "telephonnumber"
+        //true - compares only field "telephonnumber" - ovverride abstract class method equals
         System.out.println(phone5.equals(phone6));
-
+        System.out.println(phone5.hashCode());
+        System.out.println(phone6.hashCode());
 
     }
 
