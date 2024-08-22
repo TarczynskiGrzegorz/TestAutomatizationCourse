@@ -1,5 +1,7 @@
 package homework.h20240822;
 
+import java.util.Objects;
+
 public abstract class Phone {
     private static int phonesAmount;
     private int id;
@@ -51,5 +53,28 @@ public abstract class Phone {
 
     public void setDimensions(Dimensions dimensions) {
         this.dimensions = dimensions;
+    }
+
+    public abstract void start();
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Phone phone)) return false;
+        return getId() == phone.getId() && getTelephoneNumber() == phone.getTelephoneNumber() && Double.compare(prize, phone.prize) == 0 && Objects.equals(getDimensions(), phone.getDimensions());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getId(), getTelephoneNumber(), getDimensions(), prize);
+    }
+
+    @Override
+    public String toString() {
+        return "Phone{" +
+                "id=" + id +
+                ", telephoneNumber=" + telephoneNumber +
+                ", prize=" + prize +
+                '}';
     }
 }

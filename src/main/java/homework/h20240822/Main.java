@@ -6,5 +6,7 @@ public class Main {
         MobilePhone p2 = new MobilePhone();
         System.out.println(p1.getId());
         System.out.println(p2.getId());
+
+
     }
 }
