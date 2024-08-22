@@ -32,10 +32,12 @@ public abstract class Phone {
     public final int getId() {
         return id;
     }
-    public final void setId(){
+
+    public final void setId() {
         this.id = ++phonesAmount;
     }
-    public static int getPhonesInstancesAmount(){
+
+    public static int getPhonesInstancesAmount() {
         return phonesAmount;
     }
 

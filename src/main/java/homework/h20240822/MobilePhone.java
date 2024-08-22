@@ -12,7 +12,7 @@ public class MobilePhone extends Phone implements Callable, Resetable, Sendable,
     private String operatingSystem;
     private Camera cameraBack;
 
-    public MobilePhone(){
+    public MobilePhone() {
         super();
     }
 
@@ -51,10 +51,12 @@ public class MobilePhone extends Phone implements Callable, Resetable, Sendable,
     public void start() {
         System.out.println("Mobile phone starts");
     }
+
     @Override
     public String toString() {
         return "MobilePhone";
     }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

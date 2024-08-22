@@ -6,7 +6,7 @@ public class Smartphone extends MobilePhone implements Browserable {
     private int memory;
     private Camera cameraFront;
 
-    public Smartphone(){
+    public Smartphone() {
         super();
     }
 
@@ -51,5 +51,10 @@ public class Smartphone extends MobilePhone implements Browserable {
     @Override
     public void sendMessage() {
         System.out.println("Smartphone sends a message");
+    }
+
+    @Override
+    public void call() {
+        System.out.println("Smartphone phone calls");
     }
 }

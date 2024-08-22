@@ -7,10 +7,10 @@ public class Dimensions {
     protected int weight;
 
     public Dimensions() {
-        height=0;
-        width=0;
-        length=0;
-        weight=0;
+        height = 0;
+        width = 0;
+        length = 0;
+        weight = 0;
     }
 
     public Dimensions(int height, int width, int length, int weight) {

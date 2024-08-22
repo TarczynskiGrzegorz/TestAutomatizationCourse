@@ -1,11 +1,16 @@
 package homework.h20240822;
 
+import homework.h20240822.interfaces.Callable;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
-        MobilePhone p1 = new MobilePhone();
-        MobilePhone p2 = new MobilePhone();
-        System.out.println(p1.getId());
-        System.out.println(p2.getId());
+
+        List<Callable> calls = List.of(new MobilePhone(), new Smartphone(), new LandlinePhone());
+
+        calls.stream().forEach(Callable::call);
 
 
     }
