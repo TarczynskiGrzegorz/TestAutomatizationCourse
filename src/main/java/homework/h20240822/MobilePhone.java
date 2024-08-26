@@ -1,5 +1,6 @@
 package homework.h20240822;
 
+import homework.h20240822.exeptions.IllegalMobilePhoneNumberException;
 import homework.h20240822.interfaces.Callable;
 import homework.h20240822.interfaces.Chargeable;
 import homework.h20240822.interfaces.Resetable;
@@ -15,6 +16,12 @@ public class MobilePhone extends Phone implements Callable, Resetable, Sendable,
     public MobilePhone() {
         super();
     }
+
+    public MobilePhone(int telephonNumber) {
+        super();
+        setTelephoneNumber(telephonNumber);
+    }
+
 
     public MobilePhone(int telephoneNumber, Dimensions dimensions, double prize, int batteryCapacity, String operatingSystem, Camera cameraBack) {
         super(telephoneNumber, dimensions, prize);
@@ -45,6 +52,21 @@ public class MobilePhone extends Phone implements Callable, Resetable, Sendable,
 
     public void setCameraBack(Camera cameraBack) {
         this.cameraBack = cameraBack;
+    }
+
+    public void setTelephoneNumber(int telephoneNumber) {
+        try {
+            if (telephoneNumber > 999999999) {
+                throw IllegalMobilePhoneNumberException.handleIllegalPhoneNumberException(1);
+            }
+            if (telephoneNumber < 100000000) {
+                throw IllegalMobilePhoneNumberException.handleIllegalPhoneNumberException(2);
+            }
+            super.setTelephoneNumber(telephoneNumber);
+        } catch (IllegalMobilePhoneNumberException e) {
+            System.out.println(e.getMessage());
+
+        }
     }
 
     @Override

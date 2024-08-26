@@ -10,6 +10,12 @@ public class Smartphone extends MobilePhone implements Browserable {
         super();
     }
 
+    public Smartphone(int telephonNumber) {
+        super(telephonNumber);
+    }
+
+
+
     public Smartphone(int telephoneNumber, Dimensions dimensions, double prize, int batteryCapacity, String operatingSystem, Camera cameraBack, int memory, Camera cameraFront) {
         super(telephoneNumber, dimensions, prize, batteryCapacity, operatingSystem, cameraBack);
         this.memory = memory;
@@ -31,6 +37,7 @@ public class Smartphone extends MobilePhone implements Browserable {
     public void setCameraFront(Camera cameraFront) {
         this.cameraFront = cameraFront;
     }
+
 
     @Override
     public void start() {

@@ -18,6 +18,10 @@ public abstract class Phone {
         setId();
     }
 
+    public Phone(int telephoneNumber){
+        this.telephoneNumber=telephoneNumber;
+    }
+
     public Phone(int telephoneNumber, Dimensions dimensions, double prize) {
         setId();
         this.telephoneNumber = telephoneNumber;
@@ -58,6 +62,8 @@ public abstract class Phone {
     }
 
     public abstract void start();
+
+
 
     @Override
     public boolean equals(Object o) {
