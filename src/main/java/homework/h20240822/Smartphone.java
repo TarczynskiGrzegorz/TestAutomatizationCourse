@@ -1,5 +1,6 @@
 package homework.h20240822;
 
+import homework.h20240822.exeptions.IllegalMemoryValueException;
 import homework.h20240822.interfaces.Browserable;
 
 public class Smartphone extends MobilePhone implements Browserable {
@@ -26,8 +27,21 @@ public class Smartphone extends MobilePhone implements Browserable {
         return memory;
     }
 
-    public void setMemory(int memory) {
-        this.memory = memory;
+    public void setMemory(int memory) throws IllegalMemoryValueException {
+        int temp= memory;
+        boolean isperfectPowerOf2 = false;
+        while (temp%2==0){
+            temp=temp/2;
+            if(temp==1){
+                this.memory = memory;
+                isperfectPowerOf2= true;
+            }
+        }
+        if(!isperfectPowerOf2){
+            throw new IllegalMemoryValueException("memory should be powered by 2!");
+
+        }
+
     }
 
     public Camera getCameraFront() {

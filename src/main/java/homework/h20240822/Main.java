@@ -1,5 +1,6 @@
 package homework.h20240822;
 
+import homework.h20240822.exeptions.IllegalLandLinePhoneException;
 import homework.h20240822.interfaces.Callable;
 
 import java.util.ArrayList;
@@ -34,6 +35,21 @@ public class Main {
 
         Smartphone s2 = new Smartphone(1234567891);
         System.out.println(s2.getTelephoneNumber());
+
+        // catch exception
+        LandlinePhone l1 =new LandlinePhone();
+        try{
+             l1 = new LandlinePhone(1234567);
+            System.out.println("Landline Phone number : "+ l1.getTelephoneNumber());
+        }catch (IllegalLandLinePhoneException e){
+            System.out.println(e.getMessage());
+        }
+        System.out.println(l1.getTelephoneNumber());
+
+        // unhandled runtime exception
+        Smartphone s3 = new Smartphone();
+        s3.setMemory(128);
+        System.out.println(s3.getMemory());
 
 
 
