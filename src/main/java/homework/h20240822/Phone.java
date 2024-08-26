@@ -10,6 +10,8 @@ public abstract class Phone {
 
     private double prize;
 
+
+
     static {
         phonesAmount = 0;
     }
@@ -59,6 +61,14 @@ public abstract class Phone {
 
     public void setDimensions(Dimensions dimensions) {
         this.dimensions = dimensions;
+    }
+
+    public double getPrize() {
+        return prize;
+    }
+
+    public void setPrize(double prize) {
+        this.prize = prize;
     }
 
     public abstract void start();

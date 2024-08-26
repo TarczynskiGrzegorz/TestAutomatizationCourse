@@ -35,6 +35,15 @@ public final class LandlinePhone extends Phone implements Callable{
 
     }
 
+    public void setPrize(double prize){
+        if(prize<0){
+            super.setPrize(0);
+        }else {
+            super.setPrize(prize);
+        }
+
+    }
+
 
     @Override
     public void start() {

@@ -62,7 +62,20 @@ public class Main {
         }
 
 
+        System.out.println("insert Phone prize");
+        String phoneNumber;
+        //Scanner - try catch resources
+        LandlinePhone l2 = new LandlinePhone();
+        try(Scanner scanner = new Scanner(System.in)){
+            while (!scanner.hasNextDouble()){
+                scanner.next();
+                System.out.println("Not a number ! Insert a proper data");
+            }
+            double prize =scanner.nextDouble();
+            l2.setPrize(prize);
 
+        }
+        System.out.println(l2.getPrize());
 
     }
 }
