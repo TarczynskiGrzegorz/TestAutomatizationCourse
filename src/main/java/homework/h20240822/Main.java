@@ -1,10 +1,12 @@
 package homework.h20240822;
 
+import homework.h20240822.exeptions.IllegalDimensionsException;
 import homework.h20240822.exeptions.IllegalLandLinePhoneException;
 import homework.h20240822.interfaces.Callable;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
@@ -50,6 +52,14 @@ public class Main {
         Smartphone s3 = new Smartphone();
         s3.setMemory(128);
         System.out.println(s3.getMemory());
+
+        // try catch block
+        Dimensions d1 = new Dimensions();
+        try{
+            d1.setDimmensions(3,-2,2,2);
+        }catch (IllegalDimensionsException e){
+            System.out.println(e.getMessage());
+        }
 
 
 

@@ -1,5 +1,7 @@
 package homework.h20240822;
 
+import homework.h20240822.exeptions.IllegalDimensionsException;
+
 public class Dimensions {
     protected int height;
     protected int width;
@@ -49,6 +51,22 @@ public class Dimensions {
     }
 
     public void setWeight(int weight) {
+        this.weight = weight;
+    }
+
+    public void setDimmensions(int height, int length, int width, int weight) throws IllegalDimensionsException {
+       if(height<0){
+           throw IllegalDimensionsException.handleIllegaDimmensions(0);
+       }if(length<0){
+            throw IllegalDimensionsException.handleIllegaDimmensions(1);
+        }if(width<0){
+            throw IllegalDimensionsException.handleIllegaDimmensions(2);
+        }if(weight<0){
+            throw IllegalDimensionsException.handleIllegaDimmensions(3);
+        }
+        this.height = height;
+        this.width = width;
+        this.length = length;
         this.weight = weight;
     }
 }
