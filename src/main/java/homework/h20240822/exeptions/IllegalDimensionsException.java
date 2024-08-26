@@ -1,7 +1,7 @@
 package homework.h20240822.exeptions;
 
-public class IllegalDimensionsException extends Exception{
-    public IllegalDimensionsException(String message){
+public class IllegalDimensionsException extends Exception {
+    public IllegalDimensionsException(String message) {
         super(message);
     }
 

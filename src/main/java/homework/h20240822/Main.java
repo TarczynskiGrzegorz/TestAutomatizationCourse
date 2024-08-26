@@ -39,11 +39,11 @@ public class Main {
         System.out.println(s2.getTelephoneNumber());
 
         // catch exception
-        LandlinePhone l1 =new LandlinePhone();
-        try{
-             l1 = new LandlinePhone(1234567);
-            System.out.println("Landline Phone number : "+ l1.getTelephoneNumber());
-        }catch (IllegalLandLinePhoneException e){
+        LandlinePhone l1 = new LandlinePhone();
+        try {
+            l1 = new LandlinePhone(1234567);
+            System.out.println("Landline Phone number : " + l1.getTelephoneNumber());
+        } catch (IllegalLandLinePhoneException e) {
             System.out.println(e.getMessage());
         }
         System.out.println(l1.getTelephoneNumber());
@@ -55,23 +55,22 @@ public class Main {
 
         // try catch block
         Dimensions d1 = new Dimensions();
-        try{
-            d1.setDimmensions(3,-2,2,2);
-        }catch (IllegalDimensionsException e){
+        try {
+            d1.setDimmensions(3, -2, 2, 2);
+        } catch (IllegalDimensionsException e) {
             System.out.println(e.getMessage());
         }
 
 
         System.out.println("insert Phone prize");
-        String phoneNumber;
-        //Scanner - try catch resources
+        //Scanner - try with resources
         LandlinePhone l2 = new LandlinePhone();
-        try(Scanner scanner = new Scanner(System.in)){
-            while (!scanner.hasNextDouble()){
+        try (Scanner scanner = new Scanner(System.in)) {
+            while (!scanner.hasNextDouble()) {
                 scanner.next();
                 System.out.println("Not a number ! Insert a proper data");
             }
-            double prize =scanner.nextDouble();
+            double prize = scanner.nextDouble();
             l2.setPrize(prize);
 
         }

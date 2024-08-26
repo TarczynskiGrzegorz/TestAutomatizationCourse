@@ -1,5 +1,7 @@
 package homework.h20240822;
 
+import homework.h20240822.exeptions.IllegalPrizeException;
+
 import java.util.Objects;
 
 public abstract class Phone {
@@ -11,7 +13,6 @@ public abstract class Phone {
     private double prize;
 
 
-
     static {
         phonesAmount = 0;
     }
@@ -20,8 +21,8 @@ public abstract class Phone {
         setId();
     }
 
-    public Phone(int telephoneNumber){
-        this.telephoneNumber=telephoneNumber;
+    public Phone(int telephoneNumber) {
+        this.telephoneNumber = telephoneNumber;
     }
 
     public Phone(int telephoneNumber, Dimensions dimensions, double prize) {
@@ -68,11 +69,19 @@ public abstract class Phone {
     }
 
     public void setPrize(double prize) {
-        this.prize = prize;
+        try {
+            if (prize < 0) {
+                throw new IllegalPrizeException("prize cannot be less than 0!");
+            }
+            this.prize = prize;
+        } catch (IllegalPrizeException e) {
+            System.out.println(e.getMessage());
+            this.prize = 0;
+        }
+
     }
 
     public abstract void start();
-
 
 
     @Override
