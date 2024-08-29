@@ -2,16 +2,25 @@ package homework.h20240822.collections;
 
 import homework.h20240822.Phone;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class User {
-    private String userName;
-    private final Set<Phone> phones = new HashSet<>();
 
+    private static final Set<String> usersNamesSorted = new TreeSet<>() ;
+    public static Set<String> getUsersDinstinctNnames(){
+        return usersNamesSorted;
+    }
+
+    private final Set<Phone> phones = new HashSet<>();
     private final List<String> historyTelephoneNumbers = new ArrayList<>();
+    private String userName;
+
+
+    public User(String userName) {
+        this.userName = userName;
+        usersNamesSorted.add(userName);
+    }
+
 
 
     public String getUserName() {
