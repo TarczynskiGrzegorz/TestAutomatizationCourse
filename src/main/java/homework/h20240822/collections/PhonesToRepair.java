@@ -12,4 +12,12 @@ public class PhonesToRepair {
         return phonesToRepairQue;
     }
 
+    public static void repairPhone() {
+        phonesToRepairQue.poll();
+        System.out.println("Phone fixed");
+    }
+
+
+
+
 }
