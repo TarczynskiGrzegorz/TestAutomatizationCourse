@@ -4,10 +4,7 @@ import homework.h20240822.PackageSize;
 import homework.h20240822.Phone;
 import homework.h20240822.Smartphone;
 
-import java.util.Arrays;
-import java.util.Map;
-import java.util.Queue;
-import java.util.Set;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -43,7 +40,13 @@ public class Main {
         phonesU1.stream().forEach(v-> System.out.println(v.getTelephoneNumber()));
 
 
-
+        System.out.println("\nLIST TEST");
+        List<String> historyPhoneNumbersU1 = u1.getHistoryTelephoneNumbers();
+        historyPhoneNumbersU1.add(String.valueOf(p1.getTelephoneNumber()));
+        historyPhoneNumbersU1.add(String.valueOf(p2.getTelephoneNumber()));
+        historyPhoneNumbersU1.add(String.valueOf(p1.getTelephoneNumber()));
+        historyPhoneNumbersU1.add(String.valueOf(p1.getTelephoneNumber()));
+        historyPhoneNumbersU1.stream().forEach(System.out::println);
 
 
 
