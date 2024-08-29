@@ -4,8 +4,10 @@ import homework.h20240822.PackageSize;
 import homework.h20240822.Phone;
 import homework.h20240822.Smartphone;
 
+import java.util.Arrays;
 import java.util.Map;
 import java.util.Queue;
+import java.util.Set;
 
 public class Main {
     public static void main(String[] args) {
@@ -31,6 +33,16 @@ public class Main {
         for( Map.Entry<Phone, PackageSize> p: phonesWithPackage.entrySet()){
             System.out.println(p.getKey().getTelephoneNumber() + ", package: " + p.getValue());
         }
+
+        System.out.println("\nSET TEST");
+        User u1 = new User();
+        Set<Phone> phonesU1 = u1.getPhones();
+        phonesU1.add(p1);
+        phonesU1.add(p2);
+        phonesU1.add(p1);
+        phonesU1.stream().forEach(v-> System.out.println(v.getTelephoneNumber()));
+
+
 
 
 
