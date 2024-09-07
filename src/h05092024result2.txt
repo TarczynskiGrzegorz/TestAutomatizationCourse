@@ -1,0 +1,3 @@
+kota :x3
+ma :x3
+ala :x3
