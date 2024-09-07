@@ -13,6 +13,8 @@ public class Main {
 
         try {
             File file = new File("src/h05092024.txt");
+
+            // solution by streams
             String distincNames1 =
                     Arrays.stream(FileUtils.readFileToString(file, "UTF-8").split("[.,; \n]"))
                             .map(Main::parseWord)
@@ -24,7 +26,6 @@ public class Main {
 
 
             // solution by maps - in my opinion not such efficient as streams
-
             Map<String, Integer> wordsWithOccurrences = new HashMap<>();
             String[] words = FileUtils.readFileToString(file, "UTF-8").split("[.,; \n]");
             for (String w : words) {
@@ -37,11 +38,12 @@ public class Main {
             File fileResult2 = new File("src/h05092024result2.txt");
             StringBuilder distincNames2 = new StringBuilder();
             for (Map.Entry<String, Integer> e : wordsWithOccurrences.entrySet()) {
-                if (e.getValue() != -1) {
                     distincNames2.append(e.getKey()).append(" :x").append(e.getValue()).append("\n");
-                }
             }
             FileUtils.write(fileResult2, distincNames2.toString());
+
+            // It can be solved also on many diffrent ways e.g. by Set
+
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
