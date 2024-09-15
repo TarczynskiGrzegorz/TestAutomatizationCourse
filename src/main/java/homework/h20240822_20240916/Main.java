@@ -1,11 +1,8 @@
-package homework.h20240822;
+package homework.h20240822_20240916;
 
-import homework.h20240822.exeptions.IllegalDimensionsException;
-import homework.h20240822.exeptions.IllegalLandLinePhoneException;
-import homework.h20240822.interfaces.Callable;
+import homework.h20240822_20240916.exeptions.IllegalDimensionsException;
+import homework.h20240822_20240916.exeptions.IllegalLandLinePhoneException;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class Main {

@@ -1,8 +1,8 @@
-package homework.h20240822.collections;
+package homework.h20240822_20240916.collections;
 
-import homework.h20240822.PackageSize;
-import homework.h20240822.Phone;
-import homework.h20240822.Smartphone;
+import homework.h20240822_20240916.PackageSize;
+import homework.h20240822_20240916.Phone;
+import homework.h20240822_20240916.Smartphone;
 
 import java.util.*;
 

@@ -1,6 +1,6 @@
-package homework.h20240822;
+package homework.h20240822_20240916;
 
-import homework.h20240822.exeptions.IllegalPrizeException;
+import homework.h20240822_20240916.exeptions.IllegalPrizeException;
 
 import java.util.Objects;
 

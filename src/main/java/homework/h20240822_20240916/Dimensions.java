@@ -1,6 +1,6 @@
-package homework.h20240822;
+package homework.h20240822_20240916;
 
-import homework.h20240822.exeptions.IllegalDimensionsException;
+import homework.h20240822_20240916.exeptions.IllegalDimensionsException;
 
 public class Dimensions {
     protected int height;

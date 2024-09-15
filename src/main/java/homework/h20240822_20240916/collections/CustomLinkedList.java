@@ -1,4 +1,4 @@
-package homework.h20240822.collections;
+package homework.h20240822_20240916.collections;
 //source : https://www.prepbytes.com/blog/linked-list/how-to-implement-generic-linkedlist-in-java/
 class node<T> {
     // Stores data of the node

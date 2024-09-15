@@ -1,7 +1,7 @@
-package homework.h20240822;
+package homework.h20240822_20240916;
 
-import homework.h20240822.exeptions.IllegalLandLinePhoneException;
-import homework.h20240822.interfaces.Callable;
+import homework.h20240822_20240916.exeptions.IllegalLandLinePhoneException;
+import homework.h20240822_20240916.interfaces.Callable;
 
 import java.util.Objects;
 
@@ -23,6 +23,7 @@ public final class LandlinePhone extends Phone implements Callable {
     public void setVeryOld(boolean veryOld) {
         isVeryOld = veryOld;
     }
+
 
     public void setTelephoneNumberValidated(int telephoneNumber) throws IllegalLandLinePhoneException {
         if (telephoneNumber < 1000000) {

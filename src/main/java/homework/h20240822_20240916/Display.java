@@ -1,4 +1,4 @@
-package homework.h20240822;
+package homework.h20240822_20240916;
 
 public class Display {
     private int resolutionX;

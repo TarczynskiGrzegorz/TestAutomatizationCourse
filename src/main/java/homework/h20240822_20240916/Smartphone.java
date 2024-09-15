@@ -1,7 +1,7 @@
-package homework.h20240822;
+package homework.h20240822_20240916;
 
-import homework.h20240822.exeptions.IllegalMemoryValueException;
-import homework.h20240822.interfaces.Browserable;
+import homework.h20240822_20240916.exeptions.IllegalMemoryValueException;
+import homework.h20240822_20240916.interfaces.Browserable;
 
 public class Smartphone extends MobilePhone implements Browserable {
     private int memory;

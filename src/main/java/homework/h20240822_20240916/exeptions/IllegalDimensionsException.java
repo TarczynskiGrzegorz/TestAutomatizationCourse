@@ -1,4 +1,4 @@
-package homework.h20240822.exeptions;
+package homework.h20240822_20240916.exeptions;
 
 public class IllegalDimensionsException extends Exception {
     public IllegalDimensionsException(String message) {

@@ -1,10 +1,10 @@
-package homework.h20240822;
+package homework.h20240822_20240916;
 
-import homework.h20240822.exeptions.IllegalMobilePhoneNumberException;
-import homework.h20240822.interfaces.Callable;
-import homework.h20240822.interfaces.Chargeable;
-import homework.h20240822.interfaces.Resetable;
-import homework.h20240822.interfaces.Sendable;
+import homework.h20240822_20240916.exeptions.IllegalMobilePhoneNumberException;
+import homework.h20240822_20240916.interfaces.Callable;
+import homework.h20240822_20240916.interfaces.Chargeable;
+import homework.h20240822_20240916.interfaces.Resetable;
+import homework.h20240822_20240916.interfaces.Sendable;
 
 import java.util.Objects;
 
