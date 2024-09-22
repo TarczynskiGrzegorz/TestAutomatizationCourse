@@ -5,7 +5,7 @@ import homework.h20240822_20240916.interfaces.Callable;
 
 import java.util.Objects;
 
-public final class LandlinePhone extends Phone implements Callable {
+public final class LandlinePhone extends Phone implements Callable<Number> {
     private boolean isVeryOld;
 
     public LandlinePhone() {

@@ -1,11 +1,11 @@
-package homework.h20241209;
+package homework.h20240912;
 
-import homework.h20241209.enums.Battery;
-import homework.h20241209.enums.OSSystem;
-import homework.h20241209.enums.PizzaSize;
-import homework.h20241209.lambdaFunctionsWithGenerics.Add;
-import homework.h20241209.lambdaFunctionsWithGenerics.CheckContent;
-import homework.h20241209.lambdaFunctionsWithGenerics.PrintMessage;
+import homework.h20240912.enums.Battery;
+import homework.h20240912.enums.OSSystem;
+import homework.h20240912.enums.PizzaSize;
+import homework.h20240912.lambdaFunctionsWithGenerics.Add;
+import homework.h20240912.lambdaFunctionsWithGenerics.CheckContent;
+import homework.h20240912.lambdaFunctionsWithGenerics.PrintMessage;
 
 import java.util.function.*;
 

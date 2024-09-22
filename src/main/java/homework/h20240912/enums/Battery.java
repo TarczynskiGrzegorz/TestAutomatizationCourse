@@ -1,4 +1,4 @@
-package homework.h20241209.enums;
+package homework.h20240912.enums;
 
 import java.util.Arrays;
 

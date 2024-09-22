@@ -8,7 +8,7 @@ import homework.h20240822_20240916.interfaces.Sendable;
 
 import java.util.Objects;
 
-public class MobilePhone extends Phone implements Callable, Resetable, Sendable, Chargeable {
+public class MobilePhone extends Phone implements Callable<Number>, Resetable, Sendable, Chargeable {
     private int batteryCapacity;
     private String operatingSystem;
     private Camera cameraBack;
