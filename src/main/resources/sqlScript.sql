@@ -260,31 +260,31 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`order`
+-- Table `mydb`.`orders`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `mydb`.`order` ;
+DROP TABLE IF EXISTS `mydb`.`orders` ;
 
-CREATE TABLE IF NOT EXISTS `mydb`.`order` (
+CREATE TABLE IF NOT EXISTS `mydb`.`orders` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `car_id` INT NOT NULL,
   `client_id` INT NOT NULL,
   `dealer_id` INT NOT NULL,
-  `order_date` DATE NOT NULL,
+  `orders_date` DATE NOT NULL,
   PRIMARY KEY (`id`, `car_id`, `client_id`, `dealer_id`),
-  INDEX `fk_order_car1_idx` (`car_id` ASC) VISIBLE,
-  INDEX `fk_order_client1_idx` (`client_id` ASC) VISIBLE,
-  INDEX `fk_order_dealer1_idx` (`dealer_id` ASC) VISIBLE,
-  CONSTRAINT `fk_order_car1`
+  INDEX `fk_orders_car1_idx` (`car_id` ASC) VISIBLE,
+  INDEX `fk_orders_client1_idx` (`client_id` ASC) VISIBLE,
+  INDEX `fk_orders_dealer1_idx` (`dealer_id` ASC) VISIBLE,
+  CONSTRAINT `fk_orders_car1`
     FOREIGN KEY (`car_id`)
     REFERENCES `mydb`.`car` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  CONSTRAINT `fk_order_client1`
+  CONSTRAINT `fk_orders_client1`
     FOREIGN KEY (`client_id`)
     REFERENCES `mydb`.`client` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  CONSTRAINT `fk_order_dealer1`
+  CONSTRAINT `fk_orders_dealer1`
     FOREIGN KEY (`dealer_id`)
     REFERENCES `mydb`.`dealer` (`id`)
     ON DELETE NO ACTION
