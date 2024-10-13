@@ -1,0 +1,10 @@
+<cars>
+    <car id="1">
+        <model>BMW</model>
+        <prize>100000</prize>
+    </car>
+    <car id="2">
+        <model>Mercedes</model>
+        <prize>200000</prize>
+    </car>
+</cars>
