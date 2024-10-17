@@ -1,0 +1,16 @@
+<orders>
+    <order id="1">
+        <car>
+            <model>BMW</model>
+        </car>
+        <name>sold</name>
+        <date>2024/stycznia/12</date>
+    </order>
+    <order id="2">
+        <car>
+            <model>Mercedes</model>
+        </car>
+        <name>buy</name>
+        <date>2020/lutego/10</date>
+    </order>
+</orders>
