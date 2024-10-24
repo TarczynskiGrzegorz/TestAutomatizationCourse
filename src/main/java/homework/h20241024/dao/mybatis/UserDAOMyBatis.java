@@ -14,7 +14,7 @@ public class UserDAOMyBatis implements IUserDAO {
     @Override
     public User getEntityById(int index) {
         try(SqlSession session = sqlSessionFactory.openSession()) {
-            User user = session.selectOne("homework.h20241024.dao.getEntityById", index);
+            User user = session.selectOne("homework.h20241024.dao.IUserDAO.getEntityById", index);
             return user;
         }
     }
