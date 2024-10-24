@@ -1,7 +1,7 @@
 package homework.h20241024.dao.jdbc;
 
 import homework.h20241024.dao.ConnectionPool;
-import homework.h20241024.dao.IStudentDAO;
+import homework.h20241024.dao.IUserDAO;
 import homework.h20241024.model.User;
 
 import java.sql.Connection;
@@ -10,7 +10,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
-public class UserDAOJDBC implements IStudentDAO {
+public class UserDAOJDBC implements IUserDAO {
     private static final String READ_USER_QUERY = "SELECT * FROM mydb.user where id = ?";
 
 
